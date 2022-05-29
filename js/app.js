@@ -1,6 +1,8 @@
 // Question 1
-
+document.querySelector('.group').innerHTML = 'Group Name:';
 document.querySelector('.group').style.color = 'yellow';
+
+document.querySelector('.name').innerHTML = 'Team Hercules';
 document.querySelector('.name').style.color = 'blue';
 
 
@@ -26,45 +28,39 @@ console.log(person.state);
 //Question 4 
 
 let noun = 'Precious';
-let verb = 'sings';
+let verb = 'walks';
 let adjective = 'slowly';
 
-// console.log('The way ${noun} ${verb} is so ${adjective}');
-
-console.log('Precious' + ' ' +  'sings' + ' ' + 'slowly' + ' ' + 'in' + ' ' + 'the' + ' ' + 'bus');
-console.log('He' + ' ' +  'sings' + ' ' + 'slowly' + ' ' + 'in' + ' ' + 'the' + ' ' + 'bus');
-console.log('The' + ' ' +  'boys' + ' ' + 'were' + ' ' + 'singing' + ' ' + 'slowly');
-console.log('I' + ' ' +  'love' + ' ' + 'singing' + ' ' + 'slowly' + ' ' + 'at' + ' ' + 'home');
-console.log('Precious' + ' ' +  'can' + ' ' + 'sing' + ' ' + 'slowly' + ' ' + 'somethings');
+console.log(`${noun} ${verb} very ${adjective}`);
+console.log(` He ${verb} to church ${adjective}`);
+console.log(`${noun} friends ${verb} to school `);
+console.log(`I love to ${verb} home from work ${adjective}`);
+console.log(`${noun} and the boys ${verb} to the gym`);
 
 //Question 5
 
-// let a= prompt ('Enter a number');
-// let b= prompt ('Enter a number');
-let numer1= 5;
-let number2= 3;
-function divide(number1,number2) {
-    return(number1/number2);
+let numerator= prompt ('Enter a value');
+let denominator= prompt ('Enter a value');
+
+function divide(numerator, denominator){
+    return(numerator%denominator);
 }
-    console.log(numer1%number2);
+ console.log(numerator%denominator);
 
 
 //Question 6
 
-let a = 2;
-let b = 3;
-let c = 4;
-
-function equation (a,b,c) {
-    let eqn = b*b - 4*a*c;
-    let division= eqn/(2*a);
-    const result =Math.sqrt(-division);
-    x=-b+result;
-    y=-b-result;
-    console.log(x);
-    console.log(y);
+alert('Question 6');
+function solve(a,b,c) {
+    a= prompt ('Enter a value for a');
+    b= prompt ('Enter a value for b');
+    c= prompt ('Enter a value for c');
+    let result = (((-b) + Math.sqrt(Math.pow(b,2))-(4*a*c))/(2*a));
+    let result2 = (((-b) - Math.sqrt(Math.pow(b,2))-(4*a*c))/(2*a));
+    return `${result} and ${result2}`;
 }
-equation (2,3,4);
+console.log(solve());
+
 
 //Question 7
 
@@ -73,27 +69,26 @@ const myAdjective = "big";
 const myVerb = "ran";
 const myAdverb = "quickly";
  
-const wordBlanks = ('the ${myAdjective} ${myNoun} ${myVerb} ${myAdjerb}');
+const wordBlanks = (`A ${myAdjective} ${myNoun} ${myVerb} across the road ${myAdverb}`);
 console.log(wordBlanks);
 
 //Question 8
 
 const pi = 3.142;
-let r = 9;
-
-function areaCircle(pi, r) {
-    return(pi*r*r)
+let r= 9;
+function areaCircle() {
+    return pi*(Math.pow(9,2));
 }
-console.log(pi*r*r);
+console.log(Math.ceil(areaCircle()));
 
 //Question 9
 
-const money = 8200;
-const percent= 17.5;
-const years= 2.5;
+let principal = 8200;
+let rate = 17.5;
+let time = 2.5;
+const simpleInterest = principal*rate*time/100
 
-const interest = 8200*2.5*(17.5/100);
-console.log(interest);
+console.log(simpleInterest);
 
 //Question 10
 
@@ -108,33 +103,28 @@ console.log(num1%num2);
 
 let meritWeight= 78;
 let meritHeight= 1.69;
-let nutJobWeighht= 92;
+let nutJobWeight= 92;
 let nutJobHeight= 1.95;
 
-let testDataMerit= meritWeight/(meritHeight*meritHeight);
-let testDataNutJob= nutJobHeight/(nutJobHeight*nutJobHeight);
+let meritBmi = meritWeight/(meritHeight*meritHeight);
+console.log(`Merit's BMI = ${meritBmi}`);
 
-
-console.log(testDataMerit, testDataNutJob);
-if (testDataMerit > testDataNutJob){
-    console.log(true);
-} else{
-    console.log(false);
-}
+let nutJobBmi = nutJobWeight/(nutJobHeight*nutJobHeight);
+console.log(`Nutjob's BMI = ${nutJobBmi}`);
 
 //Data 2
 
 let meritNewWeight= 85;
 let meritNewHeight= 1.76;
-let nutJobNewWeighht= 95;
+let nutJobNewWeight= 95;
 let nutJobNewHeight= 1.88;
 
-let newTestDataMerit= meritNewWeight/(meritNewHeight*meritNewHeight);
-let newTestDataNutJob= nutJobNewHeight/(nutJobNewHeight*nutJobNewHeight);
+let newMeritBmi= meritNewWeight/(meritNewHeight*meritNewHeight);
+console.log(`Merit's New BMI = ${newMeritBmi}`);
 
-console.log(newTestDataMerit, newTestDataNutJob);
-if (newTestDataMerit > newTestDataNutJob){
-    console.log(true);
-} else{
-    console.log(false);
-}
+let newNutJobBmi= nutJobNewWeight/(nutJobNewHeight*nutJobNewHeight);
+console.log(`Nutjob's New BMI = ${newNutJobBmi}`);
+
+
+const meritHigherBMI = meritBmi > nutJobBmi && newMeritBmi > newNutJobBmi;
+console.log(meritHigherBMI);
