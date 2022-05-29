@@ -38,7 +38,7 @@ console.log(`I love to ${verb} home from work ${adjective}`);
 console.log(`${noun} and the boys ${verb} to the gym`);
 
 //Question 5
-
+alert('This is for Question 5');
 let numerator= prompt ('Enter a value');
 let denominator= prompt ('Enter a value');
 
@@ -50,7 +50,7 @@ function divide(numerator, denominator){
 
 //Question 6
 
-alert('Question 6');
+alert('This is for Question 6');
 function solve(a,b,c) {
     a= prompt ('Enter a value for a');
     b= prompt ('Enter a value for b');
