@@ -23,7 +23,7 @@ birthMonth:'May',
 state:'Imo',
 groupName:'Team Hercules',
 };
-console.log(person.state);
+console.log(person.bestMovie);
 
 //Question 4 
 
